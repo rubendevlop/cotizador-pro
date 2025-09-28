@@ -16,23 +16,50 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-xxl">
-      <a class="navbar-brand text-light fw-bold" href="#"><i class="bi bi-calculator"></i> Cotizador Pro</a>
-      <div class="ms-auto d-flex gap-2 no-print">
-        <button id="btn-tests" class="btn btn-outline-light btn-sm"><i class="bi bi-bug"></i> Ejecutar pruebas</button>
-        <button id="btn-new" class="btn btn-outline-light btn-sm"><i class="bi bi-file-earmark-plus"></i> Nueva cotización</button>
-        <button id="btn-save" class="btn btn-outline-light btn-sm"><i class="bi bi-save2"></i> Guardar borrador</button>
-        <button id="btn-load" class="btn btn-outline-light btn-sm"><i class="bi bi-cloud-download"></i> Cargar borrador</button>
-        <button id="btn-print" class="btn btn-outline-light btn-sm"><i class="bi bi-printer"></i> Imprimir</button>
-        <button id="btn-pdf" class="btn btn-primary btn-sm"><i class="bi bi-filetype-pdf"></i> Exportar PDF</button>
+      <!-- Marca -->
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-calculator"></i> Cotizador Pro
+      </a>
+  
+      <!-- Botón toggler (para móvil) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+        aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Contenido colapsable -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <div class="ms-auto d-flex gap-2 flex-wrap">
+          <!-- Botón de tema -->
+          <button id="btn-theme" class="btn btn-sm btn-nav">
+            <i class="bi bi-sun"></i> Oscuro
+          </button>
+          <!-- Botones originales -->
+          <button id="btn-tests" class="btn btn-sm btn-nav">
+            <i class="bi bi-bug"></i> Pruebas
+          </button>
+          <button id="btn-new" class="btn btn-sm btn-nav">
+            <i class="bi bi-file-earmark-plus"></i> Nueva
+          </button>
+          <button id="btn-save" class="btn btn-sm btn-nav">
+            <i class="bi bi-save2"></i> Guardar
+          </button>
+          <button id="btn-load" class="btn btn-sm btn-nav">
+            <i class="bi bi-cloud-download"></i> Cargar
+          </button>
+          <button id="btn-print" class="btn btn-sm btn-nav">
+            <i class="bi bi-printer"></i> Imprimir
+          </button>
+          <button id="btn-pdf" class="btn btn-sm btn-primary">
+            <i class="bi bi-filetype-pdf"></i> PDF
+          </button>
+        </div>
       </div>
     </div>
-    <button id="btn-theme" class="btn btn-outline-light btn-sm">
-      <i class="bi bi-sun"></i> Tema
-    </button>
-    
   </nav>
+  
 
   <main class="container-xxl my-4">
     <div class="row g-3">
