@@ -1,0 +1,167 @@
+/* ===================== PALETA BASE ===================== */
+:root {
+    --brand: #0069d9;               /* color de marca en claro */
+    --brand-contrast: #fff;         /* texto sobre brand */
+    --soft-shadow: 0 10px 30px rgba(0,0,0,.12);
+  }
+  
+  /* ===================== TEMA CLARO ===================== */
+  [data-bs-theme="light"] {
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #212529;
+    --bs-card-bg: #ffffff;
+    --bs-border-color: #e5e7eb;     /* gris claro */
+    --table-head-bg: #f8f9fa;
+    --table-text: #212529;
+    --muted: #6c757d;
+  
+    --brand: #0d6efd;               /* azul Bootstrap más vibrante en claro */
+    --brand-contrast: #ffffff;
+  }
+  
+  [data-bs-theme="light"] body {
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+  
+  [data-bs-theme="light"] .navbar{
+    background: linear-gradient(180deg, #f8fafc, #ffffff);
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+  
+  [data-bs-theme="light"] .card{
+    background: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: var(--soft-shadow);
+  }
+  
+  [data-bs-theme="light"] .form-control,
+  [data-bs-theme="light"] .form-select,
+  [data-bs-theme="light"] .dt-input{
+    background: #ffffff;
+    color: var(--bs-body-color);
+    border-color: var(--bs-border-color);
+  }
+  
+  [data-bs-theme="light"] .table { color: var(--table-text); }
+  [data-bs-theme="light"] .table thead { background: var(--table-head-bg); }
+  [data-bs-theme="light"] .pill { background:#fff; border:1px solid var(--bs-border-color); }
+  [data-bs-theme="light"] .dropzone { border-color: var(--bs-border-color); color: var(--muted); }
+  [data-bs-theme="light"] .dropzone.dragover{ background: rgba(13,110,253,.06); border-color: var(--brand); }
+  [data-bs-theme="light"] .quote-preview{ background:#fff; color:#111; }
+  
+  /* ===================== TEMA OSCURO ===================== */
+  [data-bs-theme="dark"] {
+    --bs-body-bg: #121212;
+    --bs-body-color: #f1f1f1;
+    --bs-card-bg: #1b1f25;
+    --bs-border-color: #2b3442;
+    --table-head-bg: #0b0f15;
+    --table-text: #e6e6e6;
+    --muted: #9aa4b2;
+  
+    --brand: #0dcaf0;               /* cian que destaca en oscuro */
+    --brand-contrast: #002b36;
+  }
+  
+  [data-bs-theme="dark"] body{
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+  }
+  
+  [data-bs-theme="dark"] .navbar{
+    background: linear-gradient(180deg, #0d1117, #0b0d12);
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+  
+  [data-bs-theme="dark"] .card{
+    background: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  }
+  
+  [data-bs-theme="dark"] .form-control,
+  [data-bs-theme="dark"] .form-select,
+  [data-bs-theme="dark"] .dt-input{
+    background:#0b0f15;
+    color: var(--bs-body-color);
+    border-color: var(--bs-border-color);
+  }
+  
+  [data-bs-theme="dark"] .table { color: var(--table-text); }
+  [data-bs-theme="dark"] .table thead{ background: var(--table-head-bg); }
+  [data-bs-theme="dark"] .pill{ background:#0b0f15; border:1px solid var(--bs-border-color); }
+  [data-bs-theme="dark"] .dropzone{ border-color: var(--bs-border-color); color: var(--muted); }
+  [data-bs-theme="dark"] .dropzone.dragover{ background: rgba(13,110,253,.08); border-color: var(--brand); }
+  [data-bs-theme="dark"] .quote-preview{ background:#ffffff; color:#111; }
+  
+  /* ===================== ESTILOS COMUNES ===================== */
+  .btn-primary{
+    background: var(--brand) !important;
+    border-color: var(--brand) !important;
+    color: var(--brand-contrast) !important;
+  }
+  .btn-primary:hover{
+    filter: brightness(0.95);
+  }
+  
+  .btn-outline-light{
+    border-color: var(--bs-border-color);
+  }
+  
+  /* Hovers de filas (ambos temas) */
+  .table tbody tr:hover{
+    background: rgba(13,110,253,.07);
+  }
+  
+  /* Dropzone base (ambos temas) */
+  .dropzone{
+    border:2px dashed var(--bs-border-color);
+    border-radius: .75rem;
+    padding:1rem;
+    text-align:center;
+  }
+  
+  /* Chips / Pills generales */
+  .pill{
+    display:inline-block;
+    padding:.25rem .5rem;
+    border-radius:999px;
+    font-size:.8rem;
+  }
+  
+  /* Totales */
+  .totals .list-group-item{
+    background:transparent;
+    border-color: var(--bs-border-color);
+  }
+  
+  /* Badges de test */
+  .test-pill{
+    font-size:.8rem;
+    border:1px solid var(--bs-border-color);
+    border-radius:999px;
+    padding:.25rem .5rem;
+  }
+  
+  /* Impresión */
+  @media print{
+    .no-print{ display:none !important; }
+    .quote-preview{ box-shadow:none; border:none; }
+    body{ background:white; color:#111; }
+  }
+  
+  /* ===================== DataTables afinado ===================== */
+  .dataTables_wrapper .dataTables_filter input{
+    border:1px solid var(--bs-border-color);
+    background: transparent;
+    color: inherit;
+  }
+  .dataTables_wrapper .dataTables_length select{
+    border:1px solid var(--bs-border-color);
+    background: transparent;
+    color: inherit;
+  }
+  .logo{
+    display: none;
+  }
